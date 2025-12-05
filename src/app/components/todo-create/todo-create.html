@@ -1,0 +1,12 @@
+<div class="container">
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <label for="title">Title: </label>
+    <input id="title" type="text" formControlName="title" />
+
+    <label for="description"> Description: </label>
+    <input id="description" type="text" formControlName="description" />
+    <div class="btn">
+      <button type="submit" [disabled]="todoForm.invalid">Add Todo</button>
+    </div>
+  </form>
+</div>

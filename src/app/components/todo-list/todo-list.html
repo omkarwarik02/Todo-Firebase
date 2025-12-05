@@ -1,0 +1,15 @@
+<mat-card *ngFor="let t of todos$ | async" style="margin-bottom: 12px">
+  <mat-card-content>
+    <mat-card-title>Title: {{ t.title }}</mat-card-title>
+    <p>Description: {{ t.description }}</p>
+    <small>Status: {{ t.status }}</small>
+  </mat-card-content>
+  <div class="container">
+    <section>
+      <div class="button-row">
+        <button matButton="tonal" (click)="edit(t.id!)">Edit</button>
+        <button matButton="tonal" (click)="delete(t.id!)">Delete</button>
+      </div>
+    </section>
+  </div>
+</mat-card>

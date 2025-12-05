@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="editForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="pending">Pending</mat-option>
+        <mat-option value="In-Progress">In-Progress</mat-option>
+        <mat-option value="Completed">Completed</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <section>
+      <div class="button-row">
+        <button mat-raised-button color="primary" (click)="onUpdate()">Update</button>
+      </div>
+    </section>
+  </form>
+</div>

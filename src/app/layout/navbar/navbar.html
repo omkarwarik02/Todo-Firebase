@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="navbar">
+  <h1 class="dashboard-title">Todo</h1>
+
+  <span class="spacer"></span>
+
+  <button mat-button (click)="dashboard()">Dashboard</button>
+  <button mat-button (click)="todos()">My Todos</button>
+  <button mat-button (click)="Todo()">Create Todo</button>
+
+  <button mat-icon-button>
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>
+<router-outlet></router-outlet>
