@@ -38,12 +38,13 @@ interface Status {
   styleUrls: ['./todo-edit.scss'],
 })
 export class TodoEdit implements OnInit {
-  fb = inject(FormBuilder);
-  todoService = inject(TodoService);
-  route = inject(ActivatedRoute);
-  router = inject(Router);
-  firestore = inject(Firestore);
-  injector = inject(EnvironmentInjector);
+ private fb = inject(FormBuilder);
+   private todoService = inject(TodoService);
+    private route = inject(ActivatedRoute);
+    private router = inject(Router);
+   private firestore = inject(Firestore);
+    private injector = inject(EnvironmentInjector);
+    
   todoId: string | null = null;
   editForm: FormGroup = this.fb.group({
     title: ['', Validators.required],

@@ -17,8 +17,8 @@ import { OnInit } from '@angular/core';
 })
 export class TodoList implements OnInit {
   private router = inject(Router);
-  route = inject(ActivatedRoute);
-  todoId: string | null = null;
+  private route = inject(ActivatedRoute);
+   private todoId: string | null = null;
   todos$: Observable<Todo[]>;
 
   private todoService = inject(TodoService);
